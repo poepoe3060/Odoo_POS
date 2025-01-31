@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="kis_ewallet_usage_view_tree" model="ir.ui.view">
+        <field name="name">kis_ewallet_usage_view_tree</field>
+        <field name="model">kis.ewallet.usage</field>
+        <field name="arch" type="xml">
+            <tree string="kis_ewallet_usage_tree" create="0" edit="0" delete="0">
+                <field name="partner_id"/>
+                <field name="student_id"/>
+                <field name="amount"/>
+                <field name="remain_amt" />
+                <field name="usage_date"/>
+            </tree>
+        </field>
+    </record>
+    <record id="kis_ewallet_usage_action" model="ir.actions.act_window">
+        <field name="name">KIS E-wallet Daily Usage</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kis.ewallet.usage</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="kis_ewallet_usage_categ" name="KIS E-Wallet Usage"
+              parent="point_of_sale.pos_menu_products_configuration"
+              action="kis_ewallet_usage_action" sequence="100"/>
+</odoo>

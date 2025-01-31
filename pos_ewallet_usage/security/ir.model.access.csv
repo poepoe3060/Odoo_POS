@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_kis_ewallet_usage,kis.ewallet.usage,model_kis_ewallet_usage,,1,1,1,1
+
+access_wallet_usage_report,access_wallet_usage_report,model_wallet_usage_report,base.group_user,1,1,1,1
+access_wallet_usage_report_xls,access_wallet_usage_report_xls,model_wallet_usage_report_xls,base.group_user,1,1,1,1
